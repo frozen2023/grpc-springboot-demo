@@ -1,0 +1,16 @@
+#net.devh.boot.grpc.server.config.GrpcServerProperties
+#grpc相关配置
+grpc:
+  client:
+    userClient:                 #与@GrpcClient注解相对应
+      #禁用传输层安全
+      negotiationType: PLAINTEXT
+      #grpc服务地址配置
+      address: static://127.0.0.1:9091
+server:
+  port: 9100
+spring:
+  profiles:
+    active: dev
+  application:
+    name: grpc-demo-client

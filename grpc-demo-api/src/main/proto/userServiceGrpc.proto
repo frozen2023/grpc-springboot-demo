@@ -1,0 +1,25 @@
+// 使用proto3语法
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.chen.service";
+option java_outer_classname = "UserServiceJava";
+
+package service;
+
+// The device service definition.
+service UserService {
+  // Sends a message
+  rpc getUserById (userIdRequest) returns (UserResponse){}
+}
+
+
+// The request message .
+message userIdRequest {
+  int32 id = 1;
+}
+
+message UserResponse {
+  int32 id = 1;
+  string name = 2;
+}

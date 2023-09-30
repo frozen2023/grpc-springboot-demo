@@ -1,0 +1,17 @@
+#net.devh.boot.grpc.server.config.GrpcServerProperties
+grpc:
+  server:
+    port: 9091
+    in-process-name: grpc-demo-user
+  client:
+    #允许客户端在同一应用程序内使用以下配置连接到服务器
+    inProcess:
+      address: in-process:grpc-demo-user
+spring:
+  application:
+    name: grpc-demo-user
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/todolist?serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
